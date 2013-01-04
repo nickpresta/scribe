@@ -13,6 +13,8 @@ It has two ways of generating a PDF.
 
 ## To run goscribed
 
+NOTE: binaries can not be built from within $GOPATH because of relative imports. To build, checkout to a directory outside of your $GOPATH.
+
 1. Build goscribed: `go build`
 2. `mv goscribed /some/destination`
 3. `./goscribed`
