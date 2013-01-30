@@ -14,6 +14,6 @@ Make sure that the whole goscribe repo is checked out appropriated via `go get g
 
 1. Build goscribed: `go build github.com/nickpresta/gopdf/goscribed`
 2. `mv goscribed /some/destination`
-3. `./goscribed`
+3. `./goscribed -binary /path/to/phantomjs/binary -script /path/to/rasterize.coffee`
 
 See `goscribed --help` for more information.
