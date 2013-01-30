@@ -1,0 +1,2 @@
+supervisor==3.0b1
+meld3==0.6.10
