@@ -10,6 +10,13 @@ if system.args.length < 3 or system.args.length > 4
 else
   address = system.args[1]
   output = system.args[2]
+  format = output.split('.').pop()
+  if format not in ['png', 'pdf', '/dev/stdout']
+    console.log 'Invalid output format - filename should end in png or pdf'
+    phantom.exit()
+
+  if format is '/dev/stdout'
+    format = 'pdf'
 
   # If a paper size is specified
   if system.args.length is 4
@@ -27,4 +34,4 @@ else
       phantom.exit()
     else
       # We force PDF output
-      window.setTimeout (-> page.render(output, {format: 'pdf'}); phantom.exit()), 200
+      window.setTimeout (-> page.render(output, {format: format}); phantom.exit()), 200
